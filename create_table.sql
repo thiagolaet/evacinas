@@ -1,83 +1,79 @@
 USE evacina;
 
-CREATE TABLE CIDADAOS 
+CREATE TABLE CIDADAO 
 (
-	id_ci INT NOT NULL,
     cpf_ci CHAR(11) NOT NULL,
     nome_ci VARCHAR(100) NOT NULL,
     email_ci VARCHAR(100) NOT NULL, 
     celular_ci VARCHAR(11) NOT NULL,
     telefone_ci CHAR(10),
-    endereco_ci INT NOT NULL, 
-    data_nascimento DATE NOT NULL
+    data_nascimento_ci DATE NOT NULL,
+    estado_ci CHAR(2) NOT NULL,
+    cidade_ci VARCHAR(100) NOT NULL,
+    bairro_ci VARCHAR(100) NOT NULL,
+    endereco_ci VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE FUNCIONARIOS 
+CREATE TABLE FUNCIONARIO 
 (
-	id_fu INT NOT NULL,
-    id_ci INT NOT NULL,
-    cod_fu INT NOT NULL
+	cod_fu INT NOT NULL,
+    cpf_ci_fu CHAR(11) NOT NULL
 );
 
-CREATE TABLE POSTOS_VACINACAO
+CREATE TABLE POSTO_VACINACAO
 (
 	id_po INT NOT NULL,
     nome_po VARCHAR(100) NOT NULL,
-    endereco_po INT NOT NULL,
+    estado_po CHAR(2) NOT NULL,
+	cidade_po VARCHAR(100) NOT NULL,
+    bairro_po VARCHAR(100) NOT NULL,
+    endereco_po VARCHAR(100) NOT NULL,
     telefone_po CHAR(10) NOT NULL
 );
 
-CREATE TABLE PRODUTORES_VACINAS 
+CREATE TABLE PRODUTOR_VACINAS
 (
 	id_pr INT NOT NULL,
     nome_pr VARCHAR(100)
 );
 
-CREATE TABLE LOTES
-(
-	id_lo INT NOT NULL,
-    id_pr INT NOT NULL,
-    numero_lo INT NOT NULL,
-    patogeno_lo VARCHAR(50) NOT NULL, 
-    data_fabricacao_lo DATE NOT NULL,
-    data_validade_lo DATE NOT NULL,
-    quantidade_lo INT NOT NULL,
-    doses_necessarias_lo INT NOT NULL,
-    intervalo_doses_lo INT NOT NULL
-);
-
-CREATE TABLE VACINAS
+CREATE TABLE VACINA
 (
 	id_va INT NOT NULL,
-    id_lo INT NOT NULL,
-    id_po INT NOT NULL,
-    registro_va INT NOT NULL
+    nome_va VARCHAR(100) NOT NULL,
+    patogeno_va VARCHAR(100) NOT NULL,
+	doses_necessarias_va INT NOT NULL,
+    intervalo_doses_va INT NOT NULL
 );
 
-CREATE TABLE ENDERECOS
+CREATE TABLE LOTE
 (
-	id_en INT NOT NULL,
-    estado_en CHAR(2) NOT NULL,
-    cidade_en VARCHAR(100) NOT NULL,
-    cep CHAR(8) NOT NULL,
-    bairro VARCHAR(100) NOT NULL,
-    logradouro VARCHAR(100) NOT NULL,
-    numero INT NOT NULL,
-    complemento VARCHAR(50) NOT NULL
+	id_lo INT NOT NULL,
+    id_pr_lo INT NOT NULL,
+    codigo_lo INT NOT NULL,
+    id_va_lo INT NOT NULL, 
+    data_fabricacao_lo DATE NOT NULL,
+    data_validade_lo DATE NOT NULL
+);
+
+CREATE TABLE FRASCO
+(
+	id_fr INT NOT NULL,
+    id_lo_fr INT NOT NULL,
+    registro_fr INT NOT NULL,
+	id_po_fr INT NOT NULL
 );
 
 CREATE TABLE TRABALHA_EM
 (
-	id_fu INT NOT NULL,
-    id_po INT NOT NULL
+	cod_fu_te INT NOT NULL,
+    id_po_te INT NOT NULL
 );
 
 CREATE TABLE APLICA
 (
-	id_ci INT NOT NULL,
-    id_fu INT NOT NULL,
-    id_va INT NOT NULL,
-    id_po INT NOT NULL,
+	cpf_ci_ap INT NOT NULL,
+    cod_fu_ap INT NOT NULL,
+    id_fr_ap INT NOT NULL,
     data_ap DATE NOT NULL
 );
-

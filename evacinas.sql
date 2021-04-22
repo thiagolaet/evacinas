@@ -88,7 +88,7 @@ CREATE TABLE VACINA
     nome_va VARCHAR(100) NOT NULL,
     laboratorio_va VARCHAR(100) NOT NULL,
 	doses_necessarias_va INT NOT NULL,
-    intervalo_doses_va INT DEFAULT 0 NOT NULL,
+    intervalo_doses_va INT,
     CONSTRAINT pk_va PRIMARY KEY (cod_va)
 );
 

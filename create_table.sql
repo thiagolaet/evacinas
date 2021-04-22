@@ -53,7 +53,8 @@ CREATE TABLE FRASCO
 (
 	cod_fr BIGINT NOT NULL,
     cod_lo_fr INT NOT NULL,
-    cod_po_fr INT NOT NULL
+    cod_po_fr INT NOT NULL,
+    usado_fr BOOLEAN NOT NULL 
 );
 
 CREATE TABLE PATOGENO 

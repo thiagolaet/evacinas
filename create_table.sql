@@ -51,7 +51,7 @@ CREATE TABLE LOTE
 
 CREATE TABLE FRASCO
 (
-	cod_fr INT NOT NULL,
+	cod_fr BIGINT NOT NULL,
     cod_lo_fr INT NOT NULL,
     cod_po_fr INT NOT NULL
 );
@@ -67,8 +67,8 @@ CREATE TABLE VACINA
 	cod_va INT NOT NULL,
     nome_va VARCHAR(100) NOT NULL,
     laboratorio_va VARCHAR(100) NOT NULL,
-	doses_necessarias_va INT NOT NULL,
-    intervalo_doses_va INT
+	doses_necessarias_va TINYINT NOT NULL,
+    intervalo_doses_va SMALLINT
 );
 
 CREATE TABLE IMUNIZA_CONTRA 

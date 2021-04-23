@@ -63,4 +63,4 @@ CREATE TRIGGER update_usado_fr AFTER INSERT
 ON APLICA 
 FOR EACH ROW 
 UPDATE FRASCO SET usado_fr = 1 
-WHERE frasco.cod_fr = NEW.cod_fr_ap;
+WHERE FRASCO.cod_fr = NEW.cod_fr_ap;

@@ -47,10 +47,6 @@ INSERT INTO `FUNCIONARIO` (`cod_fu`, `cpf_ci_fu`) VALUES
 (3, '12197920715'),
 (4, '68037355756');
 
-INSERT INTO `APLICA` (`cpf_ci_ap`, `cod_fu_ap`, `cod_fr_ap`, `data_ap`) VALUES
-('06104235878', 2, 3, '2021-04-22'),
-('92356874510', 2, 1, '2021-04-22');
-
 INSERT INTO `IMUNIZA_CONTRA` (`cod_va_ic`, `cod_pa_ic`) VALUES
 (1, 1),
 (2, 1),
@@ -59,3 +55,6 @@ INSERT INTO `IMUNIZA_CONTRA` (`cod_va_ic`, `cod_pa_ic`) VALUES
 INSERT INTO `TRABALHA_EM` (`cod_fu_te`, `cod_po_te`) VALUES
 (2, 1),
 (2, 3);
+
+INSERT INTO `APLICA` (`cpf_ci_ap`, `cod_fu_ap`, `cod_fr_ap`, `data_ap`) VALUES
+('06104235878', 2, 2, '2021-04-22');

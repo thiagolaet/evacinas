@@ -56,5 +56,5 @@ INSERT INTO `TRABALHA_EM` (`cod_fu_te`, `cod_po_te`) VALUES
 (2, 1),
 (2, 3);
 
-INSERT INTO `APLICA` (`cpf_ci_ap`, `cod_fu_ap`, `cod_fr_ap`, `data_ap`) VALUES
-('06104235878', 2, 2, '2021-04-22');
+INSERT INTO `APLICA` (`cpf_ci_ap`, `cod_fu_ap`, `cod_fr_ap`, `cod_lo_fr_ap`, `data_ap`) VALUES
+('06104235878', 2, 2, 1, '2021-04-22');

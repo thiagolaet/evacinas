@@ -7,7 +7,7 @@ ALTER TABLE FUNCIONARIO
 	ADD CONSTRAINT pk_fu PRIMARY KEY (cod_fu),
     ADD CONSTRAINT fk_ci_fu FOREIGN KEY (cpf_ci_fu) REFERENCES CIDADAO(cpf_ci)
     ON UPDATE CASCADE ON DELETE CASCADE,
-    ADD CONSTRAINT cpf_ci_fu_uk UNIQUE (cpf_ci_fu);
+    ADD CONSTRAINT uk_cpf_ci_fu UNIQUE (cpf_ci_fu);
     
 ALTER TABLE PRODUTOR_VACINAS
 	ADD CONSTRAINT pk_pr PRIMARY KEY (cod_pr);
@@ -27,7 +27,7 @@ ALTER TABLE LOTE
 
 ALTER TABLE POSTO_VACINACAO
 	ADD CONSTRAINT pk_po PRIMARY KEY (cod_po),
-    ADD CONSTRAINT endereco_po_uk UNIQUE (estado_po, cidade_po, bairro_po, endereco_po);
+    ADD CONSTRAINT uk_endereco_po_ UNIQUE (estado_po, cidade_po, bairro_po, endereco_po);
 
 ALTER TABLE FRASCO
 	ADD CONSTRAINT pk_fr PRIMARY KEY (cod_fr, cod_lo_fr),

@@ -89,5 +89,6 @@ CREATE TABLE APLICA
 	cpf_ci_ap CHAR(11) NOT NULL,
     cod_fu_ap INT NOT NULL,
     cod_fr_ap BIGINT NOT NULL,
+    cod_lo_fr_ap INT NOT NULL,
     data_ap DATE NOT NULL
 );
